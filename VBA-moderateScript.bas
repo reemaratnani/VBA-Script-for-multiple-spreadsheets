@@ -32,6 +32,7 @@ Sub stockdata_moderate()
                 Totalstock_volume = Totalstock_volume + ws.Cells(i, 7).Value
                 ws.Range("L" & Summary_row).Value = Totalstock_volume
                 yearly_close = ws.Cells(i, 6).Value
+                yearly_open = ws.Cells(j, 3).Value
                 yearly_change = yearly_close - yearly_open
                     'For percent_change if denomitor is 0 then division by 0 occurs
                       If yearly_open = 0 Then
@@ -62,9 +63,7 @@ Sub stockdata_moderate()
             
             Else
                 Totalstock_volume = Totalstock_volume + ws.Cells(i, 7).Value
-                'Set yearly-open in else statement to keep it unchanged until the ticker is not same.
-                yearly_open = ws.Cells(j, 3).Value
-            
+                
             End If
             
            
