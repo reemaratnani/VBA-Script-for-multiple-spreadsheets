@@ -1,1 +1,4 @@
-# VBA-project
+# VBA-Scripting
+
+
+Stock market analysis
